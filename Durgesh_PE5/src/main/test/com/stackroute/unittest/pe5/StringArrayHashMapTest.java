@@ -67,4 +67,11 @@ public class StringArrayHashMapTest {
         output.put("d",false);
         assertNotEquals(output,object.findOcurrrence(str));
     }
+
+    @Test
+    public void checkForNull() {
+        String[] str =  null;
+        assertNull(object.findOcurrrence(str));
+    }
+
 }

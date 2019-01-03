@@ -5,9 +5,10 @@ import java.util.List;
 
 public class ArrayListImplementation {
 
-    List<String > list = new ArrayList<String>();
+
     public List<String> arrayUpdate(String toRemove,String newElement)
     {
+        List<String > list = new ArrayList<String>();
         list.add("Apple");
         list.add("Grape");
         list.add("Berry");
@@ -25,9 +26,11 @@ public class ArrayListImplementation {
 
     public List<String> removeAllItems(List<String> list)
     {
-        System.out.println(list.size());
+        if(list==null)
+            return null;
+        //System.out.println(list.size());
          list.removeAll(list);
-         System.out.println(list);
+         //System.out.println(list);
          return list;
     }
 }

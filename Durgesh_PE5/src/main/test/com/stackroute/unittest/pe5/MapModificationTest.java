@@ -43,4 +43,9 @@ public class MapModificationTest {
         assertNotEquals(hmap4,obj.mapManipulation(hmap3));
 
     }
+    @Test
+    public void checkForNull() {
+       Map<String,String> map = null;
+        assertNull(obj.mapManipulation(map));
+    }
 }

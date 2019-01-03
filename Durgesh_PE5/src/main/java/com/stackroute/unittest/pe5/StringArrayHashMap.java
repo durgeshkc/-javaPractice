@@ -6,6 +6,9 @@ import java.util.Map;
 public class StringArrayHashMap
 {
     public Map<String,Boolean> findOcurrrence(String [] str){
+
+        if(str==null)
+            return null;
         Map< String,Boolean> hmap = new HashMap< String,Boolean>();
         Map< String,Integer> temp = new HashMap< String,Integer>();
         for(int i=0;i<str.length;i++){

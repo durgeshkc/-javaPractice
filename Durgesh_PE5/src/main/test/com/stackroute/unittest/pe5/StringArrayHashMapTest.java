@@ -1,5 +1,7 @@
 package com.stackroute.unittest.pe5;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -9,7 +11,18 @@ import static org.junit.Assert.*;
 
 public class StringArrayHashMapTest {
 
-    StringArrayHashMap object = new StringArrayHashMap();
+    StringArrayHashMap object ;
+
+    @Before
+    public void setUp() throws Exception {
+        object = new StringArrayHashMap();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        object = null;
+    }
+
     @Test
     public void findOcurrrence() {
         String[] str =  {"a","b","c","d","a","c","c"};

@@ -1,5 +1,7 @@
 package com.stackroute.unittest.pe5;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -9,7 +11,17 @@ import static org.junit.Assert.*;
 
 public class CountOfWordsTest {
 
-    CountOfWords countObject = new CountOfWords();
+    CountOfWords countObject;
+    @Before
+    public void setUp() throws Exception {
+        countObject = new CountOfWords();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        countObject = null;
+    }
+
     @Test
     public void count() {
         String temp = "one one -one___two,,three,one @three*one?two";

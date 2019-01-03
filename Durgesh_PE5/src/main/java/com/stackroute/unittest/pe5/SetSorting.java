@@ -9,6 +9,14 @@ public class SetSorting {
 
     public ArrayList<String> sortSet(Set<String> setOfStrings)
     {
+
+        if(setOfStrings == null)
+            return null;
+        if(setOfStrings.isEmpty())
+            return null;
+
+
+
         TreeSet myTreeSet = new TreeSet();      //Converting Set into TreeSet to sort it and remove any duplicates.........
         myTreeSet.addAll(setOfStrings);
         System.out.println(myTreeSet);

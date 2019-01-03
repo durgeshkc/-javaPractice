@@ -1,5 +1,7 @@
 package com.stackroute.unittest.pe5;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -9,7 +11,17 @@ import static org.junit.Assert.*;
 
 public class MapModificationTest {
 
-    MapModification obj = new MapModification();
+    MapModification obj ;
+
+    @Before
+    public void setUp() throws Exception {
+        obj = new MapModification();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        obj = null;
+    }
 
     @Test
     public void mapManipulation() {
